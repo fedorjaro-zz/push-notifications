@@ -10,4 +10,7 @@ import Foundation
 
 final class LandingViewModel {
 
+    var cells = [NotificationCellModel]()
+
+    // MARK: - Actions
 }

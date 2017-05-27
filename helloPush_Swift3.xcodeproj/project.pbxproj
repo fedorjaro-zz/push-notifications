@@ -19,6 +19,12 @@
 		F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */; };
 		F1C138471ED9DF1300E0C5B6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138461ED9DF1300E0C5B6 /* AppCoordinator.swift */; };
 		F1C138491ED9E1C700E0C5B6 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */; };
+		F1C1384C1ED9E51300E0C5B6 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C1384B1ED9E51300E0C5B6 /* NotificationCell.xib */; };
+		F1C1384E1ED9E52C00E0C5B6 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1384D1ED9E52C00E0C5B6 /* NotificationCell.swift */; };
+		F1C138511ED9E60F00E0C5B6 /* CellModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138501ED9E60F00E0C5B6 /* CellModelDataSource.swift */; };
+		F1C138531ED9E63700E0C5B6 /* CellConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138521ED9E63700E0C5B6 /* CellConvertible.swift */; };
+		F1C138551ED9E64200E0C5B6 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138541ED9E64200E0C5B6 /* CellModel.swift */; };
+		F1C138571ED9E6B700E0C5B6 /* NotificationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138561ED9E6B700E0C5B6 /* NotificationCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,12 @@
 		F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		F1C138461ED9DF1300E0C5B6 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		F1C1384B1ED9E51300E0C5B6 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		F1C1384D1ED9E52C00E0C5B6 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		F1C138501ED9E60F00E0C5B6 /* CellModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModelDataSource.swift; sourceTree = "<group>"; };
+		F1C138521ED9E63700E0C5B6 /* CellConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConvertible.swift; sourceTree = "<group>"; };
+		F1C138541ED9E64200E0C5B6 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		F1C138561ED9E6B700E0C5B6 /* NotificationCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 				145E88831D73F1DA00C43FA8 /* Info.plist */,
 				145E88771D73F1DA00C43FA8 /* AppDelegate.swift */,
 				F1C138461ED9DF1300E0C5B6 /* AppCoordinator.swift */,
+				145E88801D73F1DA00C43FA8 /* LaunchScreen.storyboard */,
 				F1C138451ED9DBA900E0C5B6 /* Global */,
 				F1C1383A1ED9DB1D00E0C5B6 /* Scenes */,
 				F1C1383B1ED9DB2F00E0C5B6 /* Resources */,
@@ -105,7 +118,6 @@
 		F1C1383A1ED9DB1D00E0C5B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				145E88801D73F1DA00C43FA8 /* LaunchScreen.storyboard */,
 				145E887B1D73F1DA00C43FA8 /* Main.storyboard */,
 				145E88791D73F1DA00C43FA8 /* ViewController.swift */,
 				F1C1383C1ED9DB5100E0C5B6 /* Landing */,
@@ -124,6 +136,7 @@
 		F1C1383C1ED9DB5100E0C5B6 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				F1C1384A1ED9E4FE00E0C5B6 /* NotificationCell */,
 				F1C1383D1ED9DB9900E0C5B6 /* Landing.storyboard */,
 				F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */,
 				F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */,
@@ -136,8 +149,29 @@
 			isa = PBXGroup;
 			children = (
 				F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */,
+				F1C1384F1ED9E5ED00E0C5B6 /* DataSource */,
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		F1C1384A1ED9E4FE00E0C5B6 /* NotificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1384B1ED9E51300E0C5B6 /* NotificationCell.xib */,
+				F1C1384D1ED9E52C00E0C5B6 /* NotificationCell.swift */,
+				F1C138561ED9E6B700E0C5B6 /* NotificationCellModel.swift */,
+			);
+			name = NotificationCell;
+			sourceTree = "<group>";
+		};
+		F1C1384F1ED9E5ED00E0C5B6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F1C138501ED9E60F00E0C5B6 /* CellModelDataSource.swift */,
+				F1C138521ED9E63700E0C5B6 /* CellConvertible.swift */,
+				F1C138541ED9E64200E0C5B6 /* CellModel.swift */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +248,7 @@
 				145E88821D73F1DA00C43FA8 /* LaunchScreen.storyboard in Resources */,
 				145E887F1D73F1DA00C43FA8 /* Assets.xcassets in Resources */,
 				F1C138411ED9DB9900E0C5B6 /* Landing.storyboard in Resources */,
+				F1C1384C1ED9E51300E0C5B6 /* NotificationCell.xib in Resources */,
 				145E887D1D73F1DA00C43FA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C138551ED9E64200E0C5B6 /* CellModel.swift in Sources */,
+				F1C1384E1ED9E52C00E0C5B6 /* NotificationCell.swift in Sources */,
+				F1C138571ED9E6B700E0C5B6 /* NotificationCellModel.swift in Sources */,
 				F1C138471ED9DF1300E0C5B6 /* AppCoordinator.swift in Sources */,
 				F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */,
+				F1C138531ED9E63700E0C5B6 /* CellConvertible.swift in Sources */,
 				F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */,
+				F1C138511ED9E60F00E0C5B6 /* CellModelDataSource.swift in Sources */,
 				F1C138491ED9E1C700E0C5B6 /* Storyboard.swift in Sources */,
 				145E887A1D73F1DA00C43FA8 /* ViewController.swift in Sources */,
 				F1C138431ED9DB9900E0C5B6 /* LandingViewController.swift in Sources */,

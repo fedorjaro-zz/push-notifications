@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Landing View Controller-->
+        <!--Push Notifications-->
         <scene sceneID="wNu-vz-AgM">
             <objects>
                 <viewController storyboardIdentifier="LandingViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mrg-aK-cPW" customClass="LandingViewController" customModule="helloPush_Swift3" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,75 @@
                     <view key="view" contentMode="scaleToFill" id="xRA-Nz-89m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WGu-Ib-Luu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mrg-aK-cPW" id="0Kx-ts-XNV"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oB9-5d-6BI">
+                                <rect key="frame" x="0.0" y="615" width="375" height="52"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AaL-Wj-ri0">
+                                        <rect key="frame" x="15" y="8" width="260" height="35"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="0fW-gO-u4K"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNN-6l-NqT">
+                                        <rect key="frame" x="275" y="0.0" width="100" height="52"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
+                                        <state key="normal" title="SEND"/>
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="mrg-aK-cPW" eventType="touchUpInside" id="sXu-TY-QPJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lNN-6l-NqT" secondAttribute="trailing" id="3o3-JV-Lfa"/>
+                                    <constraint firstItem="lNN-6l-NqT" firstAttribute="top" secondItem="oB9-5d-6BI" secondAttribute="top" id="Lpw-52-SF8"/>
+                                    <constraint firstItem="lNN-6l-NqT" firstAttribute="leading" secondItem="AaL-Wj-ri0" secondAttribute="trailing" id="M8F-uB-bQL"/>
+                                    <constraint firstAttribute="height" constant="52" id="dXW-Pk-6uC"/>
+                                    <constraint firstItem="AaL-Wj-ri0" firstAttribute="centerY" secondItem="oB9-5d-6BI" secondAttribute="centerY" id="gVX-ZB-1AS"/>
+                                    <constraint firstAttribute="bottom" secondItem="lNN-6l-NqT" secondAttribute="bottom" id="jI9-4l-e9M"/>
+                                    <constraint firstAttribute="trailing" secondItem="AaL-Wj-ri0" secondAttribute="trailing" constant="100" id="tod-Bq-YeU"/>
+                                    <constraint firstItem="AaL-Wj-ri0" firstAttribute="leading" secondItem="oB9-5d-6BI" secondAttribute="leading" constant="15" id="xgs-fG-xEE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WGu-Ib-Luu" firstAttribute="top" secondItem="lNf-Tp-JWb" secondAttribute="bottom" id="9j1-mz-Ueq"/>
+                            <constraint firstItem="WGu-Ib-Luu" firstAttribute="leading" secondItem="xRA-Nz-89m" secondAttribute="leading" id="IIf-59-cnH"/>
+                            <constraint firstAttribute="trailing" secondItem="oB9-5d-6BI" secondAttribute="trailing" id="RtZ-o7-f8H"/>
+                            <constraint firstItem="oB9-5d-6BI" firstAttribute="top" secondItem="WGu-Ib-Luu" secondAttribute="bottom" id="blr-Nk-3YE"/>
+                            <constraint firstAttribute="trailing" secondItem="WGu-Ib-Luu" secondAttribute="trailing" id="h9s-go-261"/>
+                            <constraint firstItem="oB9-5d-6BI" firstAttribute="leading" secondItem="xRA-Nz-89m" secondAttribute="leading" id="siA-gc-EkJ"/>
+                            <constraint firstItem="PXa-7e-hdt" firstAttribute="top" secondItem="oB9-5d-6BI" secondAttribute="bottom" id="xob-gl-4K4"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fO7-ju-87H"/>
+                    <navigationItem key="navigationItem" title="Push Notifications" id="fO7-ju-87H"/>
+                    <connections>
+                        <outlet property="sendButton" destination="lNN-6l-NqT" id="GA7-DH-F6l"/>
+                        <outlet property="tableView" destination="WGu-Ib-Luu" id="9Ar-Qm-hFX"/>
+                        <outlet property="textField" destination="AaL-Wj-ri0" id="U4L-Zs-33L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPs-1e-mb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="152"/>
+            <point key="canvasLocation" x="912.79999999999995" y="151.57421289355324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lx0-LG-Xao">
