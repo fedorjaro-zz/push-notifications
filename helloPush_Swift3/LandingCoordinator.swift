@@ -11,27 +11,35 @@ import FuntastyKit
 
 final class LandingCoordinator: DefaultCoordinator {
 
-    var navigationController: UINavigationController?
+    private var window: UIWindow?
+    weak var destinationNavigationController: UINavigationController?
     weak var viewController: LandingViewController?
     var viewModel: LandingViewModel
 
-    init(navigationController: UINavigationController, viewModel: LandingViewModel) {
-        self.navigationController = navigationController
+    // MARK: - Init
+
+    init(window: UIWindow, viewModel: LandingViewModel) {
+        self.window = window
+        self.destinationNavigationController = Storyboard.Landing.LandingNavigationController.instantiate()
+        self.viewController = self.destinationNavigationController?.topViewController as? LandingViewController
         self.viewModel = viewModel
     }
 
     // MARK: - Lifecycle
 
     func start() {
-        guard let viewController = viewController else {
+        guard let window = window, let destinationNavigationController = destinationNavigationController, let viewController = viewController else {
             return
         }
-        viewController.viewModel = viewModel
         viewController.coordinator = self
-        navigationController?.pushViewController(viewController, animated: true)
+        viewController.viewModel = viewModel
+
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.window?.rootViewController = destinationNavigationController
+        })
     }
 
-    func stop() {
-        _ = navigationController?.popViewController(animated: true)
-    }
+    // MARK: - Actions
+
+    
 }

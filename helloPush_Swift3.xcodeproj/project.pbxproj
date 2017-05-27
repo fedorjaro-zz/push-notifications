@@ -17,6 +17,8 @@
 		F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */; };
 		F1C138431ED9DB9900E0C5B6 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */; };
 		F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */; };
+		F1C138471ED9DF1300E0C5B6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138461ED9DF1300E0C5B6 /* AppCoordinator.swift */; };
+		F1C138491ED9E1C700E0C5B6 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingCoordinator.swift; sourceTree = "<group>"; };
 		F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		F1C138461ED9DF1300E0C5B6 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				84F3EC841ED9D1D100AD30B6 /* helloPush_Swift3.entitlements */,
 				145E88831D73F1DA00C43FA8 /* Info.plist */,
 				145E88771D73F1DA00C43FA8 /* AppDelegate.swift */,
+				F1C138461ED9DF1300E0C5B6 /* AppCoordinator.swift */,
 				F1C138451ED9DBA900E0C5B6 /* Global */,
 				F1C1383A1ED9DB1D00E0C5B6 /* Scenes */,
 				F1C1383B1ED9DB2F00E0C5B6 /* Resources */,
@@ -130,6 +135,7 @@
 		F1C138451ED9DBA900E0C5B6 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C138471ED9DF1300E0C5B6 /* AppCoordinator.swift in Sources */,
 				F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */,
 				F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */,
+				F1C138491ED9E1C700E0C5B6 /* Storyboard.swift in Sources */,
 				145E887A1D73F1DA00C43FA8 /* ViewController.swift in Sources */,
 				F1C138431ED9DB9900E0C5B6 /* LandingViewController.swift in Sources */,
 				145E88781D73F1DA00C43FA8 /* AppDelegate.swift in Sources */,
