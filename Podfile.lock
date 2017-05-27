@@ -4,16 +4,29 @@ PODS:
     - BMSAnalyticsAPI (~> 2.2)
   - BMSPush (3.2.3):
     - BMSCore (~> 2.0)
+  - FuntastyKit (0.1)
 
 DEPENDENCIES:
   - BMSCore
   - BMSPush
+  - FuntastyKit (from `https://github.com/thefuntasty/FuntastyKit.git`, tag `v0.5`)
+
+EXTERNAL SOURCES:
+  FuntastyKit:
+    :git: https://github.com/thefuntasty/FuntastyKit.git
+    :tag: v0.5
+
+CHECKOUT OPTIONS:
+  FuntastyKit:
+    :git: https://github.com/thefuntasty/FuntastyKit.git
+    :tag: v0.5
 
 SPEC CHECKSUMS:
   BMSAnalyticsAPI: 2e07dee6452e3cdbdc5fd0ee7362b66a281e3963
   BMSCore: 30674d30566134125e9bee043ccbea652445ca92
   BMSPush: f45dfcd4d50a88146f0adc8728249dc5ea60ab63
+  FuntastyKit: 3d31d71864492ffbe7a20688dc7e8f1f6f559f33
 
-PODFILE CHECKSUM: 3fdecbfb9d2fe4e8e0ac757e94e1be1d24a58cc1
+PODFILE CHECKSUM: f84745472055e6dff714aab602603d14054f86b4
 
 COCOAPODS: 1.2.1

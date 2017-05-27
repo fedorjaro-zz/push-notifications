@@ -8,29 +8,26 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>BMSCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>BMSPush.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>FuntastyKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-helloPush_Swift3.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -40,12 +37,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60685275BA9667CB6DCB0E3D86B79CA0</key>
+		<key>305B4358E6ABCBF91ED88402FAE53DF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>61F9D945E1FA3913FDAACD73B8994CFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>684C8582DBFDD111025C830C17CC1BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

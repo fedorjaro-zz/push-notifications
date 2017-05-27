@@ -71,12 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				84F3EC841ED9D1D100AD30B6 /* helloPush_Swift3.entitlements */,
-				145E88771D73F1DA00C43FA8 /* AppDelegate.swift */,
-				145E88791D73F1DA00C43FA8 /* ViewController.swift */,
-				145E887B1D73F1DA00C43FA8 /* Main.storyboard */,
-				145E887E1D73F1DA00C43FA8 /* Assets.xcassets */,
-				145E88801D73F1DA00C43FA8 /* LaunchScreen.storyboard */,
 				145E88831D73F1DA00C43FA8 /* Info.plist */,
+				145E88771D73F1DA00C43FA8 /* AppDelegate.swift */,
+				F1C1383A1ED9DB1D00E0C5B6 /* Scenes */,
+				F1C1383B1ED9DB2F00E0C5B6 /* Resources */,
 			);
 			path = helloPush_Swift3;
 			sourceTree = "<group>";
@@ -88,6 +86,32 @@
 				DCE0E3FE7B0D3380A29695F2 /* Pods-helloPush_Swift3.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1C1383A1ED9DB1D00E0C5B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				145E88801D73F1DA00C43FA8 /* LaunchScreen.storyboard */,
+				145E887B1D73F1DA00C43FA8 /* Main.storyboard */,
+				145E88791D73F1DA00C43FA8 /* ViewController.swift */,
+				F1C1383C1ED9DB5100E0C5B6 /* Landing */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		F1C1383B1ED9DB2F00E0C5B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				145E887E1D73F1DA00C43FA8 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F1C1383C1ED9DB5100E0C5B6 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Landing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
