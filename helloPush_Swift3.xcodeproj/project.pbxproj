@@ -13,6 +13,10 @@
 		145E887F1D73F1DA00C43FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 145E887E1D73F1DA00C43FA8 /* Assets.xcassets */; };
 		145E88821D73F1DA00C43FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145E88801D73F1DA00C43FA8 /* LaunchScreen.storyboard */; };
 		EAE6AC4B3104E0F216BA390D /* Pods_helloPush_Swift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351E94030EF8DF625123CE40 /* Pods_helloPush_Swift3.framework */; };
+		F1C138411ED9DB9900E0C5B6 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C1383D1ED9DB9900E0C5B6 /* Landing.storyboard */; };
+		F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */; };
+		F1C138431ED9DB9900E0C5B6 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */; };
+		F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		351E94030EF8DF625123CE40 /* Pods_helloPush_Swift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloPush_Swift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3EC841ED9D1D100AD30B6 /* helloPush_Swift3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = helloPush_Swift3.entitlements; sourceTree = "<group>"; };
 		DCE0E3FE7B0D3380A29695F2 /* Pods-helloPush_Swift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPush_Swift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloPush_Swift3/Pods-helloPush_Swift3.release.xcconfig"; sourceTree = "<group>"; };
+		F1C1383D1ED9DB9900E0C5B6 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingCoordinator.swift; sourceTree = "<group>"; };
+		F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 				84F3EC841ED9D1D100AD30B6 /* helloPush_Swift3.entitlements */,
 				145E88831D73F1DA00C43FA8 /* Info.plist */,
 				145E88771D73F1DA00C43FA8 /* AppDelegate.swift */,
+				F1C138451ED9DBA900E0C5B6 /* Global */,
 				F1C1383A1ED9DB1D00E0C5B6 /* Scenes */,
 				F1C1383B1ED9DB2F00E0C5B6 /* Resources */,
 			);
@@ -110,8 +119,19 @@
 		F1C1383C1ED9DB5100E0C5B6 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				F1C1383D1ED9DB9900E0C5B6 /* Landing.storyboard */,
+				F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */,
+				F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */,
+				F1C138401ED9DB9900E0C5B6 /* LandingViewModel.swift */,
 			);
 			name = Landing;
+			sourceTree = "<group>";
+		};
+		F1C138451ED9DBA900E0C5B6 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +169,7 @@
 				TargetAttributes = {
 					145E88731D73F1DA00C43FA8 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 4L97XUQKZV;
+						DevelopmentTeam = BDEMPY8P27;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -187,6 +207,7 @@
 			files = (
 				145E88821D73F1DA00C43FA8 /* LaunchScreen.storyboard in Resources */,
 				145E887F1D73F1DA00C43FA8 /* Assets.xcassets in Resources */,
+				F1C138411ED9DB9900E0C5B6 /* Landing.storyboard in Resources */,
 				145E887D1D73F1DA00C43FA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */,
+				F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */,
 				145E887A1D73F1DA00C43FA8 /* ViewController.swift in Sources */,
+				F1C138431ED9DB9900E0C5B6 /* LandingViewController.swift in Sources */,
 				145E88781D73F1DA00C43FA8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +404,7 @@
 				CODE_SIGN_ENTITLEMENTS = helloPush_Swift3/helloPush_Swift3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tomas Pecuch (4L97XUQKZV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4L97XUQKZV;
+				DEVELOPMENT_TEAM = BDEMPY8P27;
 				INFOPLIST_FILE = helloPush_Swift3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jtm.blueweather;
@@ -399,7 +423,7 @@
 				CODE_SIGN_ENTITLEMENTS = helloPush_Swift3/helloPush_Swift3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tomas Pecuch (4L97XUQKZV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4L97XUQKZV;
+				DEVELOPMENT_TEAM = BDEMPY8P27;
 				INFOPLIST_FILE = helloPush_Swift3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jtm.blueweather;
