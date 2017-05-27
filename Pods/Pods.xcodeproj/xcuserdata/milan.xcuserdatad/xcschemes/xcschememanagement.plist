@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BMSAnalyticsAPI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>BMSCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>BMSPush.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-helloPush_Swift3.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2FB23D39E7FE2807BED30821A7F9D5B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60685275BA9667CB6DCB0E3D86B79CA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61F9D945E1FA3913FDAACD73B8994CFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0CEAD2E8424C777AE1B1A7B1944D39C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
