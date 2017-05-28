@@ -50,5 +50,6 @@ final class LandingViewController: UIViewController {
 
     @IBAction func sendButtonPressed(_ sender: Any) {
         // TODO
+        API.sharedInstance.postMessage(text: textField.text!)
     }
 }
