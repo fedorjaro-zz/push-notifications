@@ -24,9 +24,9 @@ final class LandingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
     @IBOutlet weak var inputViewBottomConstraint: NSLayoutConstraint!
 
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
