@@ -10,6 +10,7 @@ import UIKit
 
 class NotificationCell: UITableViewCell {
 
+    @IBOutlet weak var messageLabel: UILabel!
 }
 
 extension NotificationCell: CellConfigurable {
@@ -17,6 +18,7 @@ extension NotificationCell: CellConfigurable {
         guard let model = model as? NotificationCellModel else {
             return
         }
-        //model.delegate = self
+
+        messageLabel.text = model.message
     }
 }

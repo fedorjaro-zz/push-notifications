@@ -14,6 +14,7 @@
 		145E88821D73F1DA00C43FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145E88801D73F1DA00C43FA8 /* LaunchScreen.storyboard */; };
 		84F3EC8A1ED9F3CF00AD30B6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3EC891ED9F3CF00AD30B6 /* API.swift */; };
 		EAE6AC4B3104E0F216BA390D /* Pods_helloPush_Swift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351E94030EF8DF625123CE40 /* Pods_helloPush_Swift3.framework */; };
+		F19458571EDB46DA007B6851 /* Keyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19458561EDB46DA007B6851 /* Keyboardable.swift */; };
 		F1C138411ED9DB9900E0C5B6 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C1383D1ED9DB9900E0C5B6 /* Landing.storyboard */; };
 		F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */; };
 		F1C138431ED9DB9900E0C5B6 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */; };
@@ -41,6 +42,7 @@
 		84F3EC841ED9D1D100AD30B6 /* helloPush_Swift3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = helloPush_Swift3.entitlements; sourceTree = "<group>"; };
 		84F3EC891ED9F3CF00AD30B6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DCE0E3FE7B0D3380A29695F2 /* Pods-helloPush_Swift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloPush_Swift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloPush_Swift3/Pods-helloPush_Swift3.release.xcconfig"; sourceTree = "<group>"; };
+		F19458561EDB46DA007B6851 /* Keyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboardable.swift; sourceTree = "<group>"; };
 		F1C1383D1ED9DB9900E0C5B6 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		F1C1383E1ED9DB9900E0C5B6 /* LandingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingCoordinator.swift; sourceTree = "<group>"; };
 		F1C1383F1ED9DB9900E0C5B6 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -151,8 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				F1C138481ED9E1C700E0C5B6 /* Storyboard.swift */,
-				F1C1384F1ED9E5ED00E0C5B6 /* DataSource */,
+				F19458561EDB46DA007B6851 /* Keyboardable.swift */,
 				84F3EC891ED9F3CF00AD30B6 /* API.swift */,
+				F1C1384F1ED9E5ED00E0C5B6 /* DataSource */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -301,7 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -317,6 +320,7 @@
 				F1C138471ED9DF1300E0C5B6 /* AppCoordinator.swift in Sources */,
 				F1C138421ED9DB9900E0C5B6 /* LandingCoordinator.swift in Sources */,
 				F1C138531ED9E63700E0C5B6 /* CellConvertible.swift in Sources */,
+				F19458571EDB46DA007B6851 /* Keyboardable.swift in Sources */,
 				F1C138441ED9DB9900E0C5B6 /* LandingViewModel.swift in Sources */,
 				F1C138511ED9E60F00E0C5B6 /* CellModelDataSource.swift in Sources */,
 				84F3EC8A1ED9F3CF00AD30B6 /* API.swift in Sources */,

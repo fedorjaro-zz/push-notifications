@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FuntastyKit
 
 final class LandingViewController: UIViewController {
 
@@ -16,18 +17,35 @@ final class LandingViewController: UIViewController {
     // MARK: - Properties
 
     var dataSource: CellModelDataSource?
+    var keyboardObservers: [Any] = []
 
     // MARK: - Outlets
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var inputViewBottomConstraint: NSLayoutConstraint!
 
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupInteractions()
+
+        viewModel.delegate = self
+        viewModel.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startUsingKeyboard()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopUsingKeyboard()
     }
 
     // MARK: - Setup methods
@@ -46,10 +64,76 @@ final class LandingViewController: UIViewController {
         tableView.delegate = dataSource
     }
 
+    private func setupTextField() {
+        textField.delegate = self
+    }
+
+    private func setupInteractions() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+
     // MARK: - Actions
 
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        viewModel.viewDidLoad()
+    }
+    
     @IBAction func sendButtonPressed(_ sender: Any) {
-        // TODO
-        API.sharedInstance.postMessage(text: textField.text!)
+        guard let text = textField.text else {
+            return
+        }
+        viewModel.post(notification: text)
+        textField.text = nil
+        updateSendButton()
+    }
+
+    // MARK: - Helpers
+
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        updateSendButton()
+    }
+
+    private func updateSendButton() {
+        if let text = textField.text, text.characters.count >= 1 {
+            sendButton.isEnabled = true
+        } else {
+            sendButton.isEnabled = false
+        }
+    }
+
+    @objc fileprivate func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+extension LandingViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dismissKeyboard()
+        return false
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layoutIfNeeded()
+    }
+}
+
+extension LandingViewController: Keyboardable {
+    func keyboardChanges(height: CGFloat) {
+        if inputViewBottomConstraint.constant != height {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.inputViewBottomConstraint.constant = height
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+}
+
+extension LandingViewController: LandingViewModelDelegate {
+    func reloadTableView() {
+        dataSource?.cells = viewModel.cells
+        tableView.reloadData()
     }
 }

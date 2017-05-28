@@ -11,6 +11,11 @@ import UIKit
 
 class NotificationCellModel {
 
+    var message: String
+
+    init(message: String) {
+        self.message = message
+    }
 }
 
 extension NotificationCellModel: CellModel {
@@ -19,6 +24,6 @@ extension NotificationCellModel: CellModel {
     }
 
     var cellHeight: CGFloat {
-        return 80.0
+        return 50.0
     }
 }

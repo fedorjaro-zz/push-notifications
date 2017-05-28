@@ -9,24 +9,23 @@
 import Foundation
 import Alamofire
 
-protocol APIdelegate: class {
+protocol APIAdapterDelegate: class {
     func didLoadMessage(message: String)
 }
 
-class API {
+class APIAdapter {
     
-    static let sharedInstance = API()
+    static let sharedInstance = APIAdapter()
     
-    weak var delegate : APIdelegate?
-    var messagesArray = [String]() {
-        didSet {
-            if let del = self.delegate {
-            }
-        }
-    }
+    weak var delegate: APIAdapterDelegate?
+
+    // MARK: - Properties
+
     var name = UIDevice.current.name
-    
-    
+    var messagesArray = [String]()
+
+    // MARK: - Actions
+
     func getMessages() {
         Alamofire.request("http://imfpush.eu-gb.bluemix.net/imfpush/v1/apps/02bfd12b-9df3-4283-aecc-661b2abb77a2/messages", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["appSecret" : "eb8af3a3-35c2-47ca-96cf-2437b839dedf"])
             .responseJSON { response in
@@ -78,8 +77,7 @@ class API {
         let params = [
             "message" : ["alert" : "\(name): \(text), \(self.getDate())"]
         ]
-        
-        
+
         Alamofire.request("http://imfpush.eu-gb.bluemix.net/imfpush/v1/apps/02bfd12b-9df3-4283-aecc-661b2abb77a2/messages", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
                 print("😂 printing post response 😂😂😂😂😂😂😂😂")
@@ -88,6 +86,8 @@ class API {
                 print(response.result.value as Any)   // result of response serialization
         }
     }
+
+    // MARK: - Helpers
     
     private func getDate() -> String {
         let date = Date()
@@ -97,5 +97,4 @@ class API {
         let minutes = calendar.component(.minute, from: date)
         return "\(hour):\(minutes)"
     }
-    
 }

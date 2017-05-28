@@ -31,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator?.start()
 
         window?.makeKeyAndVisible()
+        setupAppearance()
+
+        registerForPush()
+
         return true
     }
 
@@ -86,9 +90,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application (_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
-        let push =  BMSPushClient.sharedInstance
+        let push = BMSPushClient.sharedInstance
         push.registerWithDeviceToken(deviceToken: deviceToken) { (response, statusCode, error) -> Void in
             if error.isEmpty {
+
+                APIAdapter.sharedInstance.getMessages()
+
                 print( "Response during device registration : \(response)")
                 print( "status code during device registration : \(statusCode)")
                 self.sendNotifToDisplayResponse(responseValue: "Response during device registration json: \(response)")
@@ -160,6 +167,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let alert = UIAlertController.init(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.window!.rootViewController!.present(alert, animated: true, completion: nil)
+    }
+
+    private func setupAppearance() {
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 18.0, weight: UIFontWeightSemibold)]
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
     }
 }
 
