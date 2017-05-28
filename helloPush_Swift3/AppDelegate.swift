@@ -18,6 +18,8 @@ import BMSPush
 import UserNotifications
 import UserNotificationsUI
 
+public var responseText: String?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

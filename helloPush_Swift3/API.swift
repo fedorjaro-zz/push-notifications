@@ -27,6 +27,8 @@ class APIAdapter {
     // MARK: - Actions
 
     func getMessages() {
+        messagesArray.removeAll()
+
         Alamofire.request("http://imfpush.eu-gb.bluemix.net/imfpush/v1/apps/02bfd12b-9df3-4283-aecc-661b2abb77a2/messages", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["appSecret" : "eb8af3a3-35c2-47ca-96cf-2437b839dedf"])
             .responseJSON { response in
                 //                print(response.request as Any)  // original URL request
