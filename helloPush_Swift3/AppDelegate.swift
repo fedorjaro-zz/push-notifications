@@ -155,7 +155,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String)
-        self.showAlert(title: "Recieved Push notifications", message: payLoad)
+        self.showAlert(title: "Recieved Notification", message: payLoad)
+        APIAdapter.sharedInstance.getMessages()
     }
     
     func sendNotifToDisplayResponse (responseValue:String){

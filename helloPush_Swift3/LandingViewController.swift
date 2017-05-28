@@ -32,6 +32,7 @@ final class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupTextField()
         setupInteractions()
 
         viewModel.delegate = self
@@ -87,16 +88,17 @@ final class LandingViewController: UIViewController {
         }
         viewModel.post(notification: text)
         textField.text = nil
+        dismissKeyboard()
         updateSendButton()
     }
 
     // MARK: - Helpers
 
-    @objc private func textFieldDidChange(_ textField: UITextField) {
+    func textFieldDidChange(_ textField: UITextField) {
         updateSendButton()
     }
 
-    private func updateSendButton() {
+    func updateSendButton() {
         if let text = textField.text, text.characters.count >= 1 {
             sendButton.isEnabled = true
         } else {
@@ -104,7 +106,7 @@ final class LandingViewController: UIViewController {
         }
     }
 
-    @objc fileprivate func dismissKeyboard() {
+    func dismissKeyboard() {
         view.endEditing(true)
     }
 }

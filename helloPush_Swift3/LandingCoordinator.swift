@@ -38,8 +38,4 @@ final class LandingCoordinator: DefaultCoordinator {
             self.window?.rootViewController = destinationNavigationController
         })
     }
-
-    // MARK: - Actions
-
-    
 }
